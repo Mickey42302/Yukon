@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "mickey42302-yukon",
+  "version": "${version}",
+  "name": "Yukon",
+  "description": "This mod includes tweaks that are designed to help improve the game.",
+  "authors": [
+    "Mickey42302"
+  ],
+  "contact": {
+    "homepage": "https://linktr.ee/mickey42302",
+    "sources": "https://github.com/mickey42302"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/mickey42302-yukon/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.mickey42302.yukon.YukonInit"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "mickey42302-yukon.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.8",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
