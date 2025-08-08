@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.mickey42302.yukon.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientWorldMixin",
+    "DirectConnectScreenMixin",
+    "DisconnectedScreenMixin",
+    "KeyboardMixin",
+    "MultiplayerScreenWidgetsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "client-mickey42302-yukon-refmap.json"
+}
