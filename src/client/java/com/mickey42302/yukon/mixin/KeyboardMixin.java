@@ -39,7 +39,7 @@ public abstract class KeyboardMixin {
             assert MinecraftClient.getInstance().player != null;
             MinecraftClient.getInstance().player.sendMessage(Text.translatable("yukon.debug.uuid.copied"), false);
         }
-        if (key == 74) {
+        if (key == 82) {
             MinecraftClient client = MinecraftClient.getInstance();
             Integer currentViewDistance = client.options.getViewDistance().getValue();
             if (Screen.hasShiftDown()) {
