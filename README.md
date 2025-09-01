@@ -42,7 +42,7 @@ Yukon adds some additional F3 key binds. To see a list of them in game, you can 
 
 This mod also restores key binds that were removed from the game. These will be listed alongside Yukon's key binds when the F3 + F12 key bind is used.
 
-• F3 + J = Cycle render distance (shift to invert)
+• F3 + R = Cycle render distance (shift to invert)
 
 ## Bug Fixes
 
