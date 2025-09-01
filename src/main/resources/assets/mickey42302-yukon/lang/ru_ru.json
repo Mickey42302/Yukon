@@ -43,7 +43,7 @@
   "item.minecraft.tipped_arrow.effect.awkward": "Стрела с неуклюжим наконечником",
   "item.minecraft.tipped_arrow.effect.mundane": "Стрела с обычным наконечником",
   "item.minecraft.tipped_arrow.effect.thick": "Стрела с толстым наконечником",
-  "yukon.debug.cycle_renderdistance.help": "F3 + J = Циклическое изменение расстояния отрисовки (shift для инвертирования)",
+  "yukon.debug.cycle_renderdistance.help": "F3 + R = Циклическое изменение расстояния отрисовки (shift для инвертирования)",
   "yukon.debug.cycle_renderdistance.message": "Расстояние отрисовки: %1$s",
   "yukon.debug.help.help": "F3 + F12 = Показать этот список",
   "yukon.debug.help.message": "Сочетания клавиш Yukon:",

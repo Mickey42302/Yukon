@@ -43,7 +43,7 @@
   "item.minecraft.tipped_arrow.effect.awkward": "Tuhaf Uçlu Ok",
   "item.minecraft.tipped_arrow.effect.mundane": "Sıradan Uçlu Ok",
   "item.minecraft.tipped_arrow.effect.thick": "Kalın Uçlu Ok",
-  "yukon.debug.cycle_renderdistance.help": "F3 + J = Döngü oluşturma mesafesi (tersine çevirmek için kaydır)",
+  "yukon.debug.cycle_renderdistance.help": "F3 + R = Döngü oluşturma mesafesi (tersine çevirmek için kaydır)",
   "yukon.debug.cycle_renderdistance.message": "Oluşturma Mesafesi: %1$s",
   "yukon.debug.help.help": "F3 + F12 = Bu listeyi göster",
   "yukon.debug.help.message": "Yukon tuş atamaları:",

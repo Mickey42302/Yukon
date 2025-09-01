@@ -43,7 +43,7 @@
   "item.minecraft.tipped_arrow.effect.awkward": "Flecha con punta incómoda",
   "item.minecraft.tipped_arrow.effect.mundane": "Flecha con punta mundana",
   "item.minecraft.tipped_arrow.effect.thick": "Flecha de punta gruesa",
-  "yukon.debug.cycle_renderdistance.help": "F3 + J = Distancia de renderizado circular (Mayús para invertir)",
+  "yukon.debug.cycle_renderdistance.help": "F3 + R = Distancia de renderizado circular (Mayús para invertir)",
   "yukon.debug.cycle_renderdistance.message": "Distancia de renderizado: %1$s",
   "yukon.debug.help.help": "F3 + F12 = Mostrar esta lista",
   "yukon.debug.help.message": "Atajos de teclado de Yukon:",

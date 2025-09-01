@@ -43,7 +43,7 @@
   "item.minecraft.tipped_arrow.effect.awkward": "Стріла з незграбним кінчиком",
   "item.minecraft.tipped_arrow.effect.mundane": "Стріла з звичайним кінчиком",
   "item.minecraft.tipped_arrow.effect.thick": "Стріла з товстим кінчиком",
-  "yukon.debug.cycle_renderdistance.help": "F3 + J = Циклічна відстань рендерингу (shift для інвертування)",
+  "yukon.debug.cycle_renderdistance.help": "F3 + R = Циклічна відстань рендерингу (shift для інвертування)",
   "yukon.debug.cycle_renderdistance.message": "Відстань рендерингу: %1$s",
   "yukon.debug.help.help": "F3 + F12 = Показати цей список",
   "yukon.debug.help.message": "Прив'язки клавіш Yukon:",

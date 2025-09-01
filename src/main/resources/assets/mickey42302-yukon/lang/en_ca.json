@@ -43,7 +43,7 @@
   "item.minecraft.tipped_arrow.effect.awkward": "Awkward Tipped Arrow",
   "item.minecraft.tipped_arrow.effect.mundane": "Mundane Tipped Arrow",
   "item.minecraft.tipped_arrow.effect.thick": "Thick Tipped Arrow",
-  "yukon.debug.cycle_renderdistance.help": "F3 + J = Cycle render distance (shift to invert)",
+  "yukon.debug.cycle_renderdistance.help": "F3 + R = Cycle render distance (shift to invert)",
   "yukon.debug.cycle_renderdistance.message": "Render Distance: %1$s",
   "yukon.debug.help.help": "F3 + F12 = Show this list",
   "yukon.debug.help.message": "Yukon key bindings:",

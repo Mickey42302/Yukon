@@ -43,7 +43,7 @@
   "item.minecraft.tipped_arrow.effect.awkward": "Flèche maladroite à pointe",
   "item.minecraft.tipped_arrow.effect.mundane": "Flèche à pointe banale",
   "item.minecraft.tipped_arrow.effect.thick": "Flèche à pointe épaisse",
-  "yukon.debug.cycle_renderdistance.help": "F3 + J = Distance de rendu du cycle (Maj pour inverser)",
+  "yukon.debug.cycle_renderdistance.help": "F3 + R = Distance de rendu du cycle (Maj pour inverser)",
   "yukon.debug.cycle_renderdistance.message": "Distance de rendu : %1$s",
   "yukon.debug.help.help": "F3 + F12 = Afficher cette liste",
   "yukon.debug.help.message": "Raccourcis clavier Yukon",
