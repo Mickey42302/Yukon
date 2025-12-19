@@ -34,16 +34,6 @@ Yukon adds items that are not listed by default to the Creative inventory. Some 
 
 • Petrified Oak Slabs
 
-## F3 Key Binds
-
-Yukon adds some additional F3 key binds. To see a list of them in game, you can use the F3 + F12 key bind.
-
-• F3 + Y = Copy UUID to clipboard
-
-This mod also restores key binds that were removed from the game. These will be listed alongside Yukon's key binds when the F3 + F12 key bind is used.
-
-• F3 + R = Cycle render distance (shift to invert)
-
 ## Bug Fixes
 
 Yukon includes a patch which adds translation strings that are missing by default. This includes the missing translations for numerous death messages and the missing translations for the "/warden_spawn_tracker" command.
