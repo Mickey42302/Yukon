@@ -37,7 +37,7 @@ public class DisconnectedScreenMixin extends Screen
 	{
 		super(title);
 		ButtonWidget reconnectButton = grid.add(ButtonWidget
-				.builder(Text.literal("Reconnect"),
+				.builder(Text.translatable("yukon.reconnect"),
 						b -> LastServerUtil.reconnect(parent))
 				.width(200).build());
 		grid.refreshPositions();

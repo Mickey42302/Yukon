@@ -45,7 +45,7 @@ public class MultiplayerScreenWidgetsMixin extends Screen implements Multiplayer
 	}
 
 	@Shadow
-	private void connect(ServerInfo entry)
+    public void connect(ServerInfo entry)
 	{
 		
 	}
