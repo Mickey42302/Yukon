@@ -6,7 +6,6 @@
     "ClientWorldMixin",
     "DirectConnectScreenMixin",
     "DisconnectedScreenMixin",
-    "KeyboardMixin",
     "MultiplayerScreenWidgetsMixin"
   ],
   "injectors": {
