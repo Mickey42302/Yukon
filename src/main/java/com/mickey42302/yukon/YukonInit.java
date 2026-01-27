@@ -1,32 +1,23 @@
 package com.mickey42302.yukon;
 
+import com.mojang.logging.LogUtils;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.minecraft.SharedConstants;
+import org.slf4j.Logger;
 
 public class YukonInit implements ModInitializer {
+
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     @Override
     public void onInitialize() {
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(content -> content.add(Items.PETRIFIED_OAK_SLAB));
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
-            content.add(Items.ENDER_DRAGON_SPAWN_EGG);
-            content.add(Items.WITHER_SPAWN_EGG);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
-            content.addAfter(Items.POTION, Items.POTION);
-            content.addAfter(Items.SPLASH_POTION, Items.SPLASH_POTION);
-            content.addAfter(Items.LINGERING_POTION, Items.LINGERING_POTION);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> content.addAfter(Items.TIPPED_ARROW, Items.TIPPED_ARROW));
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> content.add(Items.KNOWLEDGE_BOOK));
+        if (SharedConstants.CHASE_COMMAND) {
+            LOGGER.warn("Warning: The \"/chase\" command is enabled. This feature is known to have a dangerous security flaw.");
+            LOGGER.warn("To close the security hole, unset the \"CHASE_COMMAND\" debug property.");
+            LOGGER.warn("Learn more: https://feedback.minecraft.net/hc/en-us/community/posts/41725200212365-Fix-permission-level-requirement-for-chase");
+        }
 
     }
 }
