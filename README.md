@@ -34,6 +34,22 @@ Yukon adds items that are not listed by default to the Creative inventory. Some 
 
 • Petrified Oak Slabs
 
+## Debug Hotkeys
+
+Yukon adds some additional debug hotkeys. You can configure them using the Controls menu. To help prevent conflicts, some of these features do not have a key bind set by default.
+
+• F3 + Y = Copy UUID to clipboard
+
+• F3 + Not Bound = Cycle simulation distance (shift to invert)
+
+This mod restores the help hotkey which was removed from the game. If the additional debug hotkeys are enabled using the "HOTKEYS" debug property, they will be listed as well. Similarly, the hotkey for generating a panoramic screenshot will be listed if the "PANORAMIC_SCREENSHOT" debug property is enabled.
+
+• F3 + Q = List all available debug hotkeys
+
+This mod also restores the render distance hotkey which was removed from the game. If you wish to use this feature, you will need to set a key bind in the Controls menu.
+
+• F3 + Not Bound = Cycle render distance (shift to invert)
+
 ## Bug Fixes
 
 Yukon includes a patch which adds translation strings that are missing by default. This includes the missing translations for numerous death messages and the missing translations for the "/warden_spawn_tracker" command.
