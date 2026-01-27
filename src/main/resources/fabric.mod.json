@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "com.mickey42302.yukon.YukonInit"
+    ],
+    "client": [
+      "com.mickey42302.yukon.YukonClientInit"
     ]
   },
   "mixins": [
