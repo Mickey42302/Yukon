@@ -14,7 +14,7 @@ public abstract class ClientWorldMixin {
 
 	@Final
 	@Shadow
-	private static Set<Item> BLOCK_MARKER_ITEMS;
+	private static final Set<Item> BLOCK_MARKER_ITEMS;
 
 	static {
 		BLOCK_MARKER_ITEMS = Set.of(Items.BARRIER, Items.LIGHT, Items.STRUCTURE_VOID);
