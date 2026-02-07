@@ -1,8 +1,8 @@
 {
-  "commands.warden_spawn_tracker.clear.success.multiple": "Penjejak spawn warden telah dikosongkan untuk %1$s pemain",
-  "commands.warden_spawn_tracker.clear.success.single": "Penjejak benih warden telah dikosongkan selama %1$s",
-  "commands.warden_spawn_tracker.set.success.multiple": "Penjejak spawn warden telah dikemas kini untuk %1$s pemain",
-  "commands.warden_spawn_tracker.set.success.single": "Penjejak spawn warden telah dikemas kini untuk %1$s",
+  "commands.warden_spawn_tracker.clear.success.multiple": "ڤنججق ڤاڤن تندا واردين تله دكلواركن اونتوق ڤماين %1$s",
+  "commands.warden_spawn_tracker.clear.success.single": "ڤنججق ڤاڤن تندا واردين تله دكلواركن اونتوق %1$s",
+  "commands.warden_spawn_tracker.set.success.multiple": "ڤنججق ڤاڤن تندا واردين تله دكمسكيني اونتوق ڤماين %1$s",
+  "commands.warden_spawn_tracker.set.success.single" : "ڤنججق ڤاڤن تندا واردين تله دكمسكيني اونتوق %1$s",
   "death.attack.anvil.item": "%1$s تله دڤوتوڠ اوليه انۏيل يڠ جاتوه كتيك ممرڠي %2$s مڠڬوناكن %3$s",
   "death.attack.arrow.player": "%1$s تله دتيمبق اوليه %2$s",
   "death.attack.cactus.item": "%1$s برجالن ك دالم كاكق سماس چوبا ملڤسكن ديري %2$s مڠڬوناكن %3$s",
