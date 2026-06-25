@@ -1,5 +1,6 @@
 package com.mickey42302.yukon;
 
+import com.mickey42302.yukon.config.YukonConfig;
 import com.mojang.logging.LogUtils;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,10 +14,16 @@ public class YukonInit implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        if (SharedConstants.CHASE_COMMAND) {
+        YukonConfig.load();
+
+        if (SharedConstants.DEBUG_CHASE_COMMAND) {
             LOGGER.warn("Warning: The \"/chase\" command is enabled. This feature is known to have a dangerous security flaw.");
             LOGGER.warn("To close the security hole, unset the \"CHASE_COMMAND\" debug property.");
             LOGGER.warn("Learn more: https://feedback.minecraft.net/hc/en-us/community/posts/41725200212365-Fix-permission-level-requirement-for-chase");
+        }
+
+        if (SharedConstants.DEBUG_DONT_SAVE_WORLD) {
+            LOGGER.warn("Warning: The DONT_SAVE_WORLD debug property is enabled. Any changes made to your worlds will be lost!");
         }
 
     }
