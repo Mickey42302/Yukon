@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:block_state",
+    "cases": [
+      {
+        "when": {
+          "ominous": "true"
+        },
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/vault_ominous"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/vault"
+    }
+  }
+}
