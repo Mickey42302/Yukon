@@ -6,7 +6,8 @@
     "ClientLevelMixin",
     "DirectJoinServerScreenMixin",
     "DisconnectedScreenMixin",
-    "JoinMultiplayerScreenMixin"
+    "JoinMultiplayerScreenMixin",
+    "TitleScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
