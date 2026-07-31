@@ -10,7 +10,7 @@ However, Yukon also includes changes that are designed to improve the game for a
 
 In Java Edition, any nearby Barriers and Light Blocks will show where they are located while you are holding the respective item. This is very useful, as the blocks are invisible.
 
-By default, Structure Voids do not show where they are located when the respective item is being held. Yukon implements this behaviour for Structure Voids. This makes working with Structure Voids much easier, as they are invisible and have a much smaller hitbox.
+By default, Structure Voids do not show where they are located when the respective item is being held. Yukon implements this behavior for Structure Voids. This makes working with Structure Voids much easier, as they are invisible and have a much smaller hitbox.
 
 ## Reconnect Button
 
@@ -24,15 +24,49 @@ Yukon adds a unique texture for the Debug Stick. Since the features of the Debug
 
 ## Creative Inventory
 
-Yukon adds items that are not listed by default to the Creative inventory. Some of these will only be visible if the Operator Utilities section is enabled.
+Yukon adds items that are not listed by default to the Creative inventory.
 
-• Uncraftable Potions/Tipped Arrows
-
-• Knowledge Books
-
-• Ender Dragon/Wither Spawn Eggs
+**Building Blocks**
 
 • Petrified Oak Slabs
+
+**Combat:**
+
+• Uncraftable Tipped Arrows
+
+**Food & Drinks:**
+
+• Uncraftable Potions
+
+• Uncraftable Splash Potions
+
+• Uncraftable Lingering Potions
+
+• Suspicious Stew with No Effects
+
+**Functional Blocks:**
+
+• Ominous Vaults
+
+**Operator Utilities**
+
+• Primed TNT (*These have "unstable" set to "true", which means that they ignite when punched.*)
+
+**Redstone Blocks:**
+
+• Inverted Daylight Detectors
+
+**Spawn Eggs:**
+
+• Ender Dragon Spawn Eggs
+
+• Wither Spawn Eggs
+
+• Warden Sculk Shriekers (*These have "can_summon" set to "true", which means that they can summon Wardens.*)
+
+**Tools & Utilities:**
+
+• Knowledge Books
 
 ## Debug Hotkeys
 
@@ -49,6 +83,14 @@ This mod restores the help hotkey which was removed from the game. If the additi
 This mod also restores the render distance hotkey which was removed from the game. If you wish to use this feature, you will need to set a key bind in the Controls menu.
 
 • F3 + Not Bound = Cycle render distance (shift to invert)
+
+## Debug Properties
+
+Yukon add debug properties which can be used to enable features that are unavailable by default. For these to work, you must enable debug properties by setting "MC_DEBUG_ENABLED" to "true".
+
+**Boolean:**
+
+• MC_DEBUG_TEST_WORLD (*This allows you to generate Test Worlds with the "TW" button on the title screen.*)
 
 ## Bug Fixes
 
