@@ -15,7 +15,7 @@ import net.minecraft.client.gui.screens.DisconnectedScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import com.mickey42302.yukon.util.LastServerUtil;
-import com.mickey42302.yukon.config.YukonConfig; // Import your config
+import com.mickey42302.yukon.config.YukonClientConfig;
 
 @Mixin(DisconnectedScreen.class)
 public class DisconnectedScreenMixin extends Screen {
@@ -35,7 +35,7 @@ public class DisconnectedScreenMixin extends Screen {
 	@Inject(method = "init()V", at = @At("TAIL"))
 	private void onInit(CallbackInfo ci)
 	{
-		if (YukonConfig.getInstance().showReconnectButton) {
+		if (YukonClientConfig.getInstance().showReconnectButton) {
 			addReconnectButton();
 		}
 	}
