@@ -1,6 +1,5 @@
 package com.mickey42302.yukon;
 
-import com.mickey42302.yukon.config.YukonConfig;
 import com.mojang.logging.LogUtils;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,8 +12,6 @@ public class YukonInit implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
-        YukonConfig.load();
 
         if (SharedConstants.DEBUG_CHASE_COMMAND) {
             LOGGER.warn("Warning: The \"/chase\" command is enabled. This feature is known to have a dangerous security flaw.");
