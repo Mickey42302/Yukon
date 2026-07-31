@@ -1,5 +1,6 @@
 package com.mickey42302.yukon;
 
+import com.mickey42302.yukon.config.YukonClientConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
@@ -8,10 +9,14 @@ import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.network.chat.Component;
 import net.minecraft.ChatFormatting;
+import net.minecraft.world.item.component.BlockItemStateProperties;
+import net.minecraft.world.level.block.*;
 import org.lwjgl.glfw.GLFW;
 
 public class YukonClientInit implements ClientModInitializer {
@@ -162,6 +167,8 @@ public class YukonClientInit implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
+        YukonClientConfig.load();
+
         copyUUIDDebugHotkey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "yukon.key.debug.uuid",
                 InputConstants.Type.KEYSYM,
@@ -196,21 +203,68 @@ public class YukonClientInit implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(YukonClientInit::renderDistanceDebug);
         ClientTickEvents.END_CLIENT_TICK.register(YukonClientInit::simulationDistanceDebug);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.OP_BLOCKS).register(content -> content.accept(Items.PETRIFIED_OAK_SLAB));
-
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS).register(content -> {
             content.accept(Items.ENDER_DRAGON_SPAWN_EGG);
             content.accept(Items.WITHER_SPAWN_EGG);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(content -> {
+            content.insertAfter(Items.LINGERING_POTION, Items.LINGERING_POTION);
             content.insertAfter(Items.POTION, Items.POTION);
             content.insertAfter(Items.SPLASH_POTION, Items.SPLASH_POTION);
-            content.insertAfter(Items.LINGERING_POTION, Items.LINGERING_POTION);
+            content.insertAfter(Items.SUSPICIOUS_STEW, Items.SUSPICIOUS_STEW);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(content -> content.insertAfter(Items.TIPPED_ARROW, Items.TIPPED_ARROW));
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(content -> content.accept(Items.KNOWLEDGE_BOOK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(content -> {
+            content.insertAfter(Items.MAP, Items.FILLED_MAP);
+            content.insertAfter(Items.WRITABLE_BOOK, Items.WRITTEN_BOOK);
+            content.insertAfter(Items.WRITTEN_BOOK, Items.KNOWLEDGE_BOOK);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(content -> content.insertAfter(Items.ENCHANTED_BOOK, Items.ENCHANTED_BOOK));
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(content -> {
+            ItemStack invertedDaylightDetector = new ItemStack(Items.DAYLIGHT_DETECTOR);
+            invertedDaylightDetector.set(
+                    net.minecraft.core.component.DataComponents.BLOCK_STATE,
+                    BlockItemStateProperties.EMPTY.with(DaylightDetectorBlock.INVERTED, true)
+            );
+            content.insertAfter(Items.DAYLIGHT_DETECTOR, invertedDaylightDetector);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.OP_BLOCKS).register(content -> {
+            ItemStack unstableTNT = new ItemStack(Items.TNT);
+            unstableTNT.set(DataComponents.ITEM_NAME, Component.translatable("entity.minecraft.tnt"));
+            unstableTNT.set(
+                    DataComponents.BLOCK_STATE,
+                    BlockItemStateProperties.EMPTY.with(TntBlock.UNSTABLE, true)
+            );
+            content.accept(unstableTNT);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.insertAfter(Items.OAK_SLAB, Items.PETRIFIED_OAK_SLAB));
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(content -> {
+            ItemStack ominousVault = new ItemStack(Items.VAULT);
+            ominousVault.set(
+                    net.minecraft.core.component.DataComponents.BLOCK_STATE,
+                    BlockItemStateProperties.EMPTY.with(VaultBlock.OMINOUS, true)
+            );
+            content.insertAfter(Items.VAULT, ominousVault);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS).register(content -> {
+            ItemStack summonSculkShrieker = new ItemStack(Items.SCULK_SHRIEKER);
+            summonSculkShrieker.set(DataComponents.ITEM_NAME, Component.translatable("entity.minecraft.warden")
+                    .append(" ")
+                    .append(Component.translatable("block.minecraft.sculk_shrieker")));
+            summonSculkShrieker.set(
+                    net.minecraft.core.component.DataComponents.BLOCK_STATE,
+                    BlockItemStateProperties.EMPTY.with(SculkShriekerBlock.CAN_SUMMON, true)
+            );
+            content.insertAfter(Items.CREAKING_HEART, summonSculkShrieker);
+        });
     }
 }
