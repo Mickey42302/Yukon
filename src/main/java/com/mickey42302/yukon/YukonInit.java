@@ -13,10 +13,8 @@ public class YukonInit implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        if (SharedConstants.DEBUG_CHASE_COMMAND) {
-            LOGGER.warn("Warning: The \"/chase\" command is enabled. This feature is known to have a dangerous security flaw.");
-            LOGGER.warn("To close the security hole, unset the \"CHASE_COMMAND\" debug property.");
-            LOGGER.warn("Learn more: https://feedback.minecraft.net/hc/en-us/community/posts/41725200212365-Fix-permission-level-requirement-for-chase");
+        if (Boolean.parseBoolean(System.getProperty("MC_DEBUG_PRINT_PROPERTIES", "true"))) {
+            System.out.println("Yukon debug property: MC_DEBUG_TEST_WORLD: bool");
         }
 
         if (SharedConstants.DEBUG_DONT_SAVE_WORLD) {
