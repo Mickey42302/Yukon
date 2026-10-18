@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.mickey42302.yukon.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ChaseCommandMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "mickey42302-yukon-refmap.json"
+}
