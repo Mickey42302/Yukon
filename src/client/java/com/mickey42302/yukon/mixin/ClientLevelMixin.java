@@ -14,7 +14,7 @@ public abstract class ClientLevelMixin {
 
 	@Final
     @Shadow
-	private static Set<Item> MARKER_PARTICLE_ITEMS;
+	private static final Set<Item> MARKER_PARTICLE_ITEMS;
 
 	static {
 		MARKER_PARTICLE_ITEMS = Set.of(Items.BARRIER, Items.LIGHT, Items.STRUCTURE_VOID);
