@@ -98,6 +98,12 @@ Yukon add debug properties which can be used to enable features that are unavail
 
 • MC_DEBUG_TEST_WORLD (*This allows you to generate Test Worlds with the "TW" button on the title screen.*)
 
+## Security
+
+By default, the "/chase" command has a security flaw which allows it to be used by any player. This is a problem, as any player with malicious intentions can abuse the tool. The issue was reported to Mojang, but they refused to address it (https://imgur.com/a/chase-exploit-jXYUTD0).
+
+This mod adds a patch which restricts it to operators with permission level 4. However, if you have a permissions plugin, you can still use the "minecraft.command.chase" permission node to customise who has access to the tool.
+
 ## Bug Fixes
 
 Yukon includes a patch which adds translation strings that are missing by default. This includes the missing translations for numerous death messages and the missing translations for the "/warden_spawn_tracker" command.
