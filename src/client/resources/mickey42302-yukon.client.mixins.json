@@ -6,6 +6,7 @@
     "ClientLevelMixin",
     "DirectJoinServerScreenMixin",
     "DisconnectedScreenMixin",
+    "HeightMapRendererMixin",
     "JoinMultiplayerScreenMixin",
     "TitleScreenMixin"
   ],
