@@ -19,6 +19,7 @@ public class YukonClientConfig {
     private static YukonClientConfig instance;
 
     public boolean showReconnectButton = true;
+    public boolean showBlankItems = false;
 
     public static YukonClientConfig getInstance() {
         if (instance == null) {
@@ -31,9 +32,14 @@ public class YukonClientConfig {
         if (CONFIG_FILE.exists()) {
             try (FileReader reader = new FileReader(CONFIG_FILE)) {
                 instance = GSON.fromJson(reader, YukonClientConfig.class);
+                if (instance == null) {
+                    instance = new YukonClientConfig();
+                }
+                save();
             } catch (IOException e) {
                 System.err.println("Failed to load configuration file.");
                 instance = new YukonClientConfig();
+                save();
             }
         } else {
             instance = new YukonClientConfig();
@@ -42,7 +48,9 @@ public class YukonClientConfig {
     }
 
     public static void save() {
-        if (instance == null) instance = new YukonClientConfig();
+        if (instance == null) {
+            instance = new YukonClientConfig();
+        }
         try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
             GSON.toJson(instance, writer);
         } catch (IOException e) {
