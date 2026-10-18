@@ -24,15 +24,21 @@ Yukon adds a unique texture for the Debug Stick. Since the features of the Debug
 
 ## Creative Inventory
 
-Yukon adds items that are not listed by default to the Creative inventory.
+Yukon adds additional blocks/items to the Creative inventory.
 
-**Building Blocks**
+**Blocks**
+
+• Cracked Decorated Pots
+
+• Ominous Vaults
+
+• Inverted Daylight Detectors
 
 • Petrified Oak Slabs
 
-**Combat:**
+• Primed TNT (*These have "unstable" set to "true", which means that they ignite when punched.*)
 
-• Uncraftable Tipped Arrows
+• Warden Sculk Shriekers (*These have "can_summon" set to "true", which means that they can summon Wardens.*)
 
 **Food & Drinks:**
 
@@ -44,17 +50,9 @@ Yukon adds items that are not listed by default to the Creative inventory.
 
 • Suspicious Stew with No Effects
 
-**Functional Blocks:**
+**Combat:**
 
-• Ominous Vaults
-
-**Operator Utilities**
-
-• Primed TNT (*These have "unstable" set to "true", which means that they ignite when punched.*)
-
-**Redstone Blocks:**
-
-• Inverted Daylight Detectors
+• Uncraftable Tipped Arrows
 
 **Spawn Eggs:**
 
@@ -62,11 +60,19 @@ Yukon adds items that are not listed by default to the Creative inventory.
 
 • Wither Spawn Eggs
 
-• Warden Sculk Shriekers (*These have "can_summon" set to "true", which means that they can summon Wardens.*)
+**Workarounds:**
 
-**Tools & Utilities:**
+*These items were created through the use of NBT data workarounds. If Mojang ever adds a true item for a respective entity, the workaround version will be removed.*
 
-• Knowledge Books
+• Illusioner Spawn Eggs
+
+• Killer Bunny Spawn Eggs
+
+• Giant Spawn Eggs
+
+• Minecart with Monster Spawners
+
+• Lightning Bolts
 
 ## Debug Hotkeys
 
