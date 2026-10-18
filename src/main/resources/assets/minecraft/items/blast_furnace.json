@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:block_state",
+    "cases": [
+      {
+        "when": {
+          "lit": "true"
+        },
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/blast_furnace_on"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/blast_furnace"
+    }
+  }
+}

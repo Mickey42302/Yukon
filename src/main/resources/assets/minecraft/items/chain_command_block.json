@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:block_state",
+    "cases": [
+      {
+        "when": {
+          "conditional": "true"
+        },
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/chain_command_block_conditional"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/chain_command_block"
+    }
+  }
+}

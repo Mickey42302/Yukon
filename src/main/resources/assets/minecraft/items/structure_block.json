@@ -1,0 +1,41 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "block_state_property": "mode",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/structure_block_corner"
+        },
+        "when": "corner"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/structure_block_data"
+        },
+        "when": "data"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/structure_block_load"
+        },
+        "when": "load"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/structure_block_save"
+        },
+        "when": "save"
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/structure_block"
+    },
+    "property": "minecraft:block_state"
+  }
+}
