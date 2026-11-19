@@ -108,7 +108,7 @@ This mod adds a patch which restricts it to operators with permission level 4. H
 
 Yukon includes a patch which adds translation strings that are missing by default. This includes the missing translations for numerous death messages and the missing translations for the "/warden_spawn_tracker" command.
 
-By default, the Awkward, Thick, and Mundane Tipped Arrows use a generic name. This bug was reported over 6 years ago, but has yet to be fixed by Mojang (https://bugs.mojang.com/browse/MC-158539).
+By default, the Awkward, Thick, and Mundane Tipped Arrows use a generic name. This bug was reported over 7 years ago, but has yet to be fixed by Mojang (https://bugs.mojang.com/browse/MC-158539).
 
 Yukon addresses the problem by changing the translations for Awkward, Thick, and Mundane Tipped Arrows. This makes it much easier to differentiate between them.
 
